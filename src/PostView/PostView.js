@@ -16,7 +16,7 @@ const style2 = {
 
 
 useEffect(() =>{
-  fetch("http://localhost:8080/allpost").then((res) =>res.json()).then((result) => setData(result))
+  fetch("https://serverme-rsmp.onrender.com/allpost").then((res) =>res.json()).then((result) => setData(result))
 })
 
   return (
