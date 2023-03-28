@@ -92,6 +92,7 @@ function Postform() {
                 
                 <button onClick={() => {
                     postimage()
+                    alert("Submitted Successfully");
                 }}>Submit</button>
             </div>
         </div>
