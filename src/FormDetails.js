@@ -6,6 +6,9 @@ import { useState, useEffect } from 'react';
 // import { Navigate, useNavigate } from 'react-router-dom';
 function Postform() {
     //   const navigate=useNavigate()
+    const confirmation = () =>{
+        alert("Submitted Successfully");
+    }
     const [name, setName] = useState("")
     const [location, setLocation] = useState("")
     const [description, setDescreption] = useState("")
@@ -92,7 +95,7 @@ function Postform() {
                 
                 <button onClick={() => {
                     postimage()
-                    alert("Submitted Successfully");
+                    confirmation()
                 }}>Submit</button>
             </div>
         </div>
