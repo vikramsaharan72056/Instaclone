@@ -6,7 +6,7 @@ const [data,setData] = useState([]);
 const style1 = {
   border: "1px solid black",
   width:"90%",
-  margin:"5%px",
+  margin:"5%",
 }
 const style2 = {
   border:"1px solid black",
@@ -23,8 +23,8 @@ useEffect(() =>{
       return(
       <div style={style1}>
         <div style = {style2}>
-        <h3 style = {{"margin":"2px"}}>{item.name}</h3> 
-      {item.location}
+        <h3 style = {{"margin":"1px"}}>{item.name}</h3> 
+     <span style = {{"margin":"1px"}}> {item.location}</span>
         </div>
         <div><img src={item.image} alt="" height="33%" width="100%" />
 
