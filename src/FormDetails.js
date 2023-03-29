@@ -1,4 +1,4 @@
-
+import {NavLink} from 'react-router-dom'
 import React from 'react'
 // import "./postform.css"
 // import Button from 'react-bootstrap/Button';
@@ -101,8 +101,9 @@ function Postform() {
                    
             </div>
         </div>
-    )
-     <NavLink to = "/allpost">View All posts</NavLink>
+        <NavLink to = "/allpost">View All posts</NavLink>
     </>
+    )
+    
 }
 export default Postform
