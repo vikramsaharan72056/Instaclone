@@ -5,9 +5,9 @@ const PostView = () => {
 const [data,setData] = useState([]);
 const style1 = {
   border: "1px solid black",
-  width:"30%",
-  margin:"40px",
-  marginLeft:"40px"
+  width:"95%",
+  margin:"10%px",
+  marginLeft:"10%"
 }
 const style2 = {
   border:"1px solid black",
@@ -27,7 +27,7 @@ useEffect(() =>{
         <h3 style = {{"margin":"2px"}}>{item.name}</h3> 
       {item.location}
         </div>
-        <div><img src={item.image} alt="" height="300px" width="100%" />
+        <div><img src={item.image} alt="" height="33%" width="100%" />
 
         </div>
       <h4>{item.description}</h4>
