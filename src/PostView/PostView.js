@@ -27,7 +27,7 @@ useEffect(() =>{
         <h3 style = {{"margin":"2px"}}>{item.name}</h3> 
       {item.location}
         </div>
-        <div><img src={item.image} alt="" height="33%" width="100%" />
+        <div><img src={item.image} alt="" height="33%" width="95%" />
 
         </div>
       <h4>{item.description}</h4>
