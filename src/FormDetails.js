@@ -70,6 +70,7 @@ function Postform() {
         color:"magenta"
     }
     return (
+        <>
         <div style={styles}>
             <div >
                 <input style = {style1}type="file" onChange={(e) => {
@@ -97,9 +98,11 @@ function Postform() {
                     postimage()
                     confirmation()
                 }}> Submit </button>
-                    <NavLink to = "/allpost">View All posts</NavLink>
+                   
             </div>
         </div>
     )
+     <NavLink to = "/allpost">View All posts</NavLink>
+    </>
 }
 export default Postform
