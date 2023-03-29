@@ -96,7 +96,7 @@ function Postform() {
                 <button onClick={() => {
                     postimage()
                     confirmation()
-                }}>Submit</button>
+                }}> <NavLink to = "/allpost">Submit </NavLink></button>
             </div>
         </div>
     )
