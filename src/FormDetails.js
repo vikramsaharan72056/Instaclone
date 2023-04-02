@@ -1,4 +1,4 @@
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import React from 'react'
 // import "./postform.css"
 // import Button from 'react-bootstrap/Button';
@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 // import { Navigate, useNavigate } from 'react-router-dom';
 function Postform() {
     //   const navigate=useNavigate()
-    const confirmation = () =>{
+    const confirmation = () => {
         alert("Submitted Successfully");
     }
     const [name, setName] = useState("")
@@ -59,51 +59,51 @@ function Postform() {
             })
     }
     const styles = {
-        border:"1px solid green",
-        width:"400px",
-        margin:"15%",
-        padding:"20px"
+        border: "1px solid green",
+        width: "400px",
+        margin: "15%",
+        padding: "20px"
     }
     const style1 = {
-        width:"98%",
-        marginBottom:"10px",
-        color:"magenta"
+        width: "98%",
+        marginBottom: "10px",
+        color: "magenta"
     }
     return (
         <>
-        <div style={styles}>
-            <div >
-                <input style = {style1}type="file" onChange={(e) => {
-                    setImage(e.target.files[0])
-                }} />
+            <div style={styles}>
+                <div >
+                    <input style={style1} type="file" onChange={(e) => {
+                        setImage(e.target.files[0])
+                    }} />
+                </div>
+                <div>
+                    <input style={style1} placeholder='Author' type="text" onChange={(e) => {
+                        setName(e.target.value)
+                    }} />
+                </div>
+                <div >
+                    <input style={style1} placeholder='location' type="text" onChange={(e) => {
+                        setLocation(e.target.value)
+                    }} />
+                </div>
+                <div >
+                    <input style={style1} placeholder='Description' type="text" onChange={(e) => {
+                        setDescreption(e.target.value)
+                    }} />
+                </div>
+                <div className='postbtn'>
+
+                    <button onClick={() => {
+                        postimage()
+                        confirmation()
+                    }}> Submit </button>
+
+                </div>
             </div>
-            <div>
-                <input style = {style1}placeholder='Author' type="text" onChange={(e) => {
-                    setName(e.target.value)
-                }} />
-            </div>
-            <div >
-                <input style = {style1}placeholder='location' type="text" onChange={(e) => {
-                    setLocation(e.target.value)
-                }} />
-            </div>
-            <div >
-                <input style = {style1} placeholder='Description' type="text" onChange={(e) => {
-                    setDescreption(e.target.value)
-                }} />
-            </div>
-            <div className='postbtn'>
-                
-                <button onClick={() => {
-                    postimage()
-                    confirmation()
-                }}> Submit </button>
-                   
-            </div>
-        </div>
-        <NavLink to = "/allpost">View All posts</NavLink>
-    </>
+            <NavLink to="/allpost">View All posts</NavLink>
+        </>
     )
-    
+
 }
 export default Postform

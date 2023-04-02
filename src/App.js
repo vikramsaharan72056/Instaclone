@@ -5,6 +5,7 @@ import {Routes,Route} from 'react-router-dom';
  import PostView from './PostView/PostView';
 import PostForm from './FormDetails';
 import Navbar from './Navbar';
+import Register from './Register';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <Route path="/" element = {<LandingPage/>}></Route>
     <Route path="/allpost" element = {<PostView/>}></Route>
     <Route path="/addpost" element = {<PostForm/>}></Route>
+    <Route path ="/register" element = { <Register/>}/> 
    </Routes>
 
    </>
