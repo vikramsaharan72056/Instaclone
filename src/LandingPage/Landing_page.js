@@ -25,7 +25,7 @@ const LogIn = () => {
             alert("password must be atleast of 6 characters")
           }else{
             
-            const data =  await fetch("/login",{
+            const data =  await fetch("https://serverme-rsmp.onrender.com/login",{
                 method:"Post",
                 headers:{
                     "Content-Type":"application/json"
