@@ -45,7 +45,7 @@ const Register = () => {
     } else if (password !== cpassword) {
       alert("confirm password does not match")
     } else {
-      const data = await fetch("/register",{
+      const data = await fetch("https://serverme-rsmp.onrender.com/register",{
         method:"POST",
         headers:{
           "Content-Type":"application/json"
