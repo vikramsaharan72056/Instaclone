@@ -17,7 +17,7 @@ function Postform() {
     useEffect(() => {
         
         if (url) {
-            fetch("/addpost", {
+            fetch("https://serverme-rsmp.onrender.com/addpost", {
                 method: "Post",
                 headers: {
                     "Content-Type": "application/json"
