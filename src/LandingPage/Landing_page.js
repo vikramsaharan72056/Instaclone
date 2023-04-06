@@ -43,8 +43,10 @@ const LogIn = () => {
                 setInputVal({...inputVal,email:"",password:""})
              }else if(res.status === 403){
                  alert("password not matched")
+                 setInputVal({...inputVal,email:"",password:""})
           }else if(res.status === 422){
               alert("fill all the details")
+              setInputVal({...inputVal,email:"",password:""})
     }
     
     return (
