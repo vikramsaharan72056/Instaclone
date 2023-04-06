@@ -41,8 +41,10 @@ const LogIn = () => {
                 localStorage.setItem("usercokie",res.result.token)
                 alert("user logged in successfully")
                 setInputVal({...inputVal,email:"",password:""})
-             }
-          }
+             }else if(res.status === 403){
+                 alert("password not matched")
+          }else if(res.status === 422){
+              alert("fill all the details")
     }
     
     return (
