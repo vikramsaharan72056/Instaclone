@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 
 const PostView = () => {
   const [data, setData] = useState([]);
-  const [like, setLikes] = useState(data.likes);
+
   const style1 = {
     border: "1px solid black",
     width: "90%",
-    margin: "5%",
+    height: "25%",
+    margin: "2%",
   };
   const style2 = { border: "1px solid black", height: "50px" };
 
@@ -15,6 +16,9 @@ const PostView = () => {
       .then((res) => res.json())
       .then((result) => setData(result));
   });
+  const onLike = () => {
+    data.likes = data.likes + 1;
+  };
 
   return data.map((item) => {
     return (
@@ -27,12 +31,13 @@ const PostView = () => {
           <img src={item.image} alt="" height="15%" width="100%" />
         </div>
         <div>
+          {" "}
           <h5>{item.description}</h5>
         </div>
         <div>
           <h5>
             <img
-              onClick={(like) => setLikes(like + 1)}
+              onClick={onLike}
               src="/like-icon-png-4158.png"
               height="2%"
               width="2%"
