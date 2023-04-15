@@ -46,36 +46,23 @@ function Postform() {
     })
       .then((res) => res.json())
       .then((result) => {
-        // console.log(res)
         setUrl(result.url);
       });
   };
-  const styles = {
-    border: "1px solid green",
-    width: "400px",
-    margin: "15%",
-    padding: "20px",
-  };
-  const style1 = {
-    width: "98%",
-    marginBottom: "10px",
-    color: "magenta",
-  };
+
   return (
-    <>
-      <div style={styles}>
-        <div>
+    <section>
+      <div className="form_data">
+        <div className="form_input">
           <input
-            style={style1}
             type="file"
             onChange={(e) => {
               setImage(e.target.files[0]);
             }}
           />
         </div>
-        <div>
+        <div className="form_input">
           <input
-            style={style1}
             placeholder="Author"
             type="text"
             onChange={(e) => {
@@ -83,9 +70,8 @@ function Postform() {
             }}
           />
         </div>
-        <div>
+        <div className="form_input">
           <input
-            style={style1}
             placeholder="location"
             type="text"
             onChange={(e) => {
@@ -93,9 +79,8 @@ function Postform() {
             }}
           />
         </div>
-        <div>
+        <div className="form_input">
           <input
-            style={style1}
             placeholder="Description"
             type="text"
             onChange={(e) => {
@@ -116,7 +101,7 @@ function Postform() {
         </div>
       </div>
       <NavLink to="/allpost">View All posts</NavLink>
-    </>
+    </section>
   );
 }
 export default Postform;
