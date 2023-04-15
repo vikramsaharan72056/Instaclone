@@ -6,10 +6,10 @@ const Navbar = () => {
     height: "50px",
     width: "100%",
     border: "1px solid aquamarine",
-    padding: "5px",
   };
   const style1 = {
     float: "left",
+    width: "0px",
   };
   const style2 = {
     float: "right",

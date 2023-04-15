@@ -23,12 +23,29 @@ const PostView = () => {
 
   return data.map((item) => {
     return (
-      <div class="row">
+      <div>
         <div class="col s12 m7">
-          <div class="card" style={{ width: "140%", margin: "2% 5%" }}>
+          <div class="card" style={{ width: "85%", margin: "4% 7%" }}>
             <span class="card-title">
-              <h4> {item.name}</h4>
-              <h6>{item.location}</h6>
+              <span style={{ fontWeight: "bold", marginLeft: "2%" }}>
+                {item.name}
+              </span>
+              <span
+                style={{
+                  display: "-ms-flexbox",
+                  float: "right",
+                  marginRight: "1%",
+                  fontSize: "16px",
+                  fontWeight: "bold",
+                }}
+              >
+                <img
+                  style={{ marginTop: "3%" }}
+                  src="/icons8-location-24.png"
+                  alt="location"
+                />
+                {item.location}
+              </span>
             </span>
             <div class="card-image">
               <img src={item.image} alt="sample" />
@@ -39,8 +56,8 @@ const PostView = () => {
                 <img
                   onClick={onLike}
                   src="/like-icon-png-4158.png"
-                  height="40px"
-                  width="40px"
+                  height="12%"
+                  width="12%"
                   alt="liker"
                 />
                 <h5 style={{ marginLeft: "3%" }}>{item.likes}</h5>
