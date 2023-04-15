@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "../App.css";
 
 const PostView = () => {
   const [data, setData] = useState([]);
@@ -22,29 +23,30 @@ const PostView = () => {
 
   return data.map((item) => {
     return (
-      <div style={style1}>
-        <div style={style2}>
-          <h3 style={{ margin: "1px" }}>{item.name}</h3>
-          <span style={{ margin: "1px" }}> {item.location}</span>
-        </div>
-        <div>
-          <img src={item.image} alt="" height="15%" width="100%" />
-        </div>
-        <div>
-          {" "}
-          <h5>{item.description}</h5>
-        </div>
-        <div>
-          <h5>
-            <img
-              onClick={onLike}
-              src="/like-icon-png-4158.png"
-              height="2%"
-              width="2%"
-              alt="liker"
-            />
-            <span style={{ height: "15%", width: "15%" }}>{item.likes}</span>
-          </h5>
+      <div class="row">
+        <div class="col s12 m7">
+          <div class="card" style={{ width: "140%", margin: "2% 5%" }}>
+            <span class="card-title">
+              <h4> {item.name}</h4>
+              <h6>{item.location}</h6>
+            </span>
+            <div class="card-image">
+              <img src={item.image} alt="sample" />
+            </div>
+            <div class="card-content">
+              <p>{item.description}</p>
+              <div style={{ display: "flex" }}>
+                <img
+                  onClick={onLike}
+                  src="/like-icon-png-4158.png"
+                  height="40px"
+                  width="40px"
+                  alt="liker"
+                />
+                <h5 style={{ marginLeft: "3%" }}>{item.likes}</h5>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );
