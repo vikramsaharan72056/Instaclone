@@ -47,7 +47,7 @@ const PostView = () => {
                 {item.location}
               </span>
             </span>
-            <div class="card-image">
+            <div class="card-image" style={{ maxHeight: "" }}>
               <img src={item.image} alt="sample" />
             </div>
             <div class="card-content">
@@ -56,8 +56,8 @@ const PostView = () => {
                 <img
                   onClick={onLike}
                   src="/like-icon-png-4158.png"
-                  height="12%"
-                  width="12%"
+                  height="5%"
+                  width="5%"
                   alt="liker"
                 />
                 <h5 style={{ marginLeft: "3%" }}>{item.likes}</h5>
