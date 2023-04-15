@@ -73,22 +73,22 @@ function Postform() {
         <>
             <div className="form_data">
                 <div >
-                    <input style={style1} type="file" onChange={(e) => {
+                    <input  type="file" onChange={(e) => {
                         setImage(e.target.files[0])
                     }} />
                 </div>
                 <div>
-                    <input style={style1} placeholder='Author' type="text" onChange={(e) => {
+                    <input  placeholder='Author' type="text" onChange={(e) => {
                         setName(e.target.value)
                     }} />
                 </div>
                 <div >
-                    <input style={style1} placeholder='location' type="text" onChange={(e) => {
+                    <input  placeholder='location' type="text" onChange={(e) => {
                         setLocation(e.target.value)
                     }} />
                 </div>
                 <div >
-                    <input style={style1} placeholder='Description' type="text" onChange={(e) => {
+                    <input  placeholder='Description' type="text" onChange={(e) => {
                         setDescreption(e.target.value)
                     }} />
                 </div>
