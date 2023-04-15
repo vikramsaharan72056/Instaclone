@@ -71,7 +71,7 @@ function Postform() {
     }
     return (
         <>
-            <div style={styles}>
+            <div className="form_data">
                 <div >
                     <input style={style1} type="file" onChange={(e) => {
                         setImage(e.target.files[0])
