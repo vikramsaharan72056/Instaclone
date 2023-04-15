@@ -62,18 +62,20 @@ function Postform() {
     color: "magenta",
   };
   return (
-    <section>
-      <div className="form_data">
-        <div className="form_input">
+    <>
+      <div style={styles}>
+        <div>
           <input
+            style={style1}
             type="file"
             onChange={(e) => {
               setImage(e.target.files[0]);
             }}
           />
         </div>
-        <div className="form_input">
+        <div>
           <input
+            style={style1}
             placeholder="Author"
             type="text"
             onChange={(e) => {
@@ -81,8 +83,9 @@ function Postform() {
             }}
           />
         </div>
-        <div className="form_input">
+        <div>
           <input
+            style={style1}
             placeholder="location"
             type="text"
             onChange={(e) => {
@@ -90,8 +93,9 @@ function Postform() {
             }}
           />
         </div>
-        <div className="form_input">
+        <div>
           <input
+            style={style1}
             placeholder="Description"
             type="text"
             onChange={(e) => {
@@ -112,7 +116,7 @@ function Postform() {
         </div>
       </div>
       <NavLink to="/allpost">View All posts</NavLink>
-    </section>
+    </>
   );
 }
 export default Postform;
